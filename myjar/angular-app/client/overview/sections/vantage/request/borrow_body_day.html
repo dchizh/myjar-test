@@ -1,0 +1,8 @@
+<h2 ng-if="withDays">[[ exampleLoan ? 'LOANS UP TO 3 MONTHS' : 'I am borrowing for']]</h2>
+<div ng-if="withDays" slider="day" class="borrow-slider day"></div>
+
+<h2 ng-if="!withDays">[[ 'I am borrowing for']]</h2>
+<div ng-if="!withDays" class="borrow-slider day">
+    <h2 class="large ng-binding">[[ activeProduct.name ]]</h2>
+    <p>Loan due date: <strong>[[activeProduct.earlierPaymentDate | instalmentDateFormat]]</strong></p>
+</div>
